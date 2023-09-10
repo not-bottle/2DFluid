@@ -32,9 +32,10 @@ const int SCREEN_WIDTH = 800;
 const int SCREEN_HEIGHT = 600;
 
 float vertices[] = {
-    -0.5f, -0.5f, 0.0f,
-     0.5,  -0.5f, 0.0f,
-     0.0f,  0.5f, 0.0f,
+    -1.0f,  1.0f, 0.0f,
+     1.0,   1.0f, 0.0f,
+    -1.0f, -1.0f, 0.0f,
+     1.0f,  -1.0f, 0.0f
 };
 
 // Simple shader to directly output triangle coordinates.
@@ -301,7 +302,7 @@ int main(int argc, char* args[])
         glClear(GL_COLOR_BUFFER_BIT); // State Using
 
         // Rendering
-        glDrawArrays(GL_TRIANGLES, 0, 3);
+        glDrawArrays(GL_TRIANGLES, 0, 4);
 
         // Events
         event_handling();
